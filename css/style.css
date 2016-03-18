@@ -1,25 +1,47 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+
 /* Global Style */
 
 * {
     padding: 0;
     margin: 0;
 }
-html, body {
-    height: 100%;
+
+html {
+    min-height: 100%;
+    /* make sure it is at least as tall as the viewport */
+    position: relative;
 }
+
 body {
     /* background: #67C1D7;*/
-    
+    height: 100%;
+    /* force the BODY element to match the height of the HTML element */
     letter-spacing: 1px;
     font-family: 'Oswald', sans-serif;
     color: white;
     background: -webkit-image-set( url(../img/noisy_net.png) 1x, url(../img/noisy_net_@2X.png) 2x);
     background-repeat: repeat;
 }
+
+.fullheight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -20;
+    /* Remove this line if it's not going to be a background! */
+}
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* Page Style */
 
 @font-face {
@@ -29,25 +51,33 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* Page Style */
 
 .page-title {
+    margin-top: 2em;
     font-size: 5em;
     text-transform: uppercase;
 }
+
 .page-data {
+    margin-top: 2em;
     font-size: 1.45em;
     color: white;
     text-shadow: 1px 1px 10px rgba(0, 30, 65, 0.1);
 }
+
 .page-data > p:hover {
     color: rgb(5, 101, 152);
     -webkit-transition: color 0.5s ease-in-out;
     /* For Safari 3.1 to 6.0 */
-    
     transition: color 0.5s ease-in-out;
 }
+
 .page-data > p:hover > b {
     background-color: rgba(160, 160, 160, 0.23);
     color: rgb(255, 255, 255);
@@ -55,32 +85,42 @@ body {
     padding: 0 4px 0 4px;
     -webkit-transition: color 0.5s ease-in-out;
     /* For Safari 3.1 to 6.0 */
-    
     transition: color 0.5s ease-in-out;
 }
+
 .title-icon {
     color: rgb(0, 88, 161);
     font-size: 1.4em;
 }
+
 .title-icon.danger {
     color: rgb(168, 8, 2);
 }
+
 .title-icon.info {
     color: rgb(0, 88, 161);
 }
+
 .title-icon.primary {
     color: rgb(14, 34, 61);
 }
+
 .title-icon.warning {
     color: rgb(255, 162, 18);
 }
+
 .title-icon.default {
     color: rgb(0, 88, 161);
 }
+
 .title-icon.success {
     color: rgb(142, 144, 143);
 }
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* Header Style */
 
 header {
@@ -90,57 +130,79 @@ header {
     background-color: rgba(255, 255, 255, 0.13);
     color: #fff;
 }
+
 header:after {
     content: '';
     display: inline-block;
     width: 100%;
 }
-header > div, header > div:before, header nav, header > div h1 {
+
+header > div,
+header > div:before,
+header nav,
+header > div h1 {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
 }
+
 header > div {
     height: 100%;
 }
+
 header > div:before {
     content: '';
     height: 100%;
 }
+
 header > div h1 {
     font-size: 3em;
     font-style: italic;
 }
+
 header nav a {
     color: rgba(255, 255, 255, 0.32);
     text-decoration: none !important;
     padding: 0 0.6em;
     white-space: nowrap;
 }
+
 header nav a:hover {
     color: white;
     text-decoration: none;
 }
-header nav a:active, header nav a:visited {
+
+header nav a:active,
+header nav a:visited {
     color: white;
     text-decoration: none;
 }
+
 header nav a:last-child {
     padding-right: 0;
 }
+
 @media screen and (max-width: 720px) {
     header {
         height: auto;
     }
-    header > div, header > div h1, header nav {
+    header > div,
+    header > div h1,
+    header nav {
         height: auto;
         width: auto;
         display: block;
         text-align: center;
     }
 }
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* Angular Animation Style */
+
+
 /*  ng-view Animation  */
 
 .view-slide-in.ng-enter {
@@ -154,30 +216,35 @@ header nav a:last-child {
     /*top: 10px;
     left: 20px;*/
 }
+
 .view-slide-in.ng-enter {
     opacity: 0;
 }
+
 .view-slide-in.ng-enter.ng-enter-active {
     /*top: 0;
     left: 0;*/
-    
     opacity: 1;
 }
+
 .view-slide-in.ng-leave.ng-leave-active {
     /*top: 5px;
     left: 5px;*/
-    
     opacity: 1;
 }
+
 .view-slide-in.ng-leave {
     /* top: 0;
     left: 0;*/
-    
     opacity: 0;
 }
+
+
 /*  ng-repeat Animation  */
 
-.repeat-animation.ng-enter, .repeat-animation.ng-leave, .repeat-animation.ng-move {
+.repeat-animation.ng-enter,
+.repeat-animation.ng-leave,
+.repeat-animation.ng-move {
     -webkit-transition: all linear 1s;
     -moz-transition: all linear 1s;
     -o-transition: all linear 1s;
@@ -185,42 +252,59 @@ header nav a:last-child {
     position: relative;
     left: 5px;
 }
+
 .repeat-animation.ng-enter {
     opacity: 0;
 }
+
 .repeat-animation.ng-enter.ng-enter-active {
     opacity: 1;
 }
+
 .repeat-animation.ng-leave {
     opacity: 1;
 }
+
 .repeat-animation.ng-leave.ng-leave-active {
     opacity: 0;
 }
+
 .repeat-animation.ng-move {
     left: 2px;
     opacity: 0.5;
 }
+
 .repeat-animation.ng-move.ng-move-active {
     left: 0;
     opacity: 1;
 }
+
+
 /*  ng-hide Animation  */
 
-.hide-fade.ng-hide-add, .hide-fade.ng-hide-remove {
+.hide-fade.ng-hide-add,
+.hide-fade.ng-hide-remove {
     -webkit-transition: all linear 1s;
     -moz-transition: all linear 1s;
     -o-transition: all linear 1s;
     transition: all linear 1s;
     display: block!important;
 }
-.hide-fade.ng-hide-add.ng-hide-add-active, .hide-fade.ng-hide-remove {
+
+.hide-fade.ng-hide-add.ng-hide-add-active,
+.hide-fade.ng-hide-remove {
     opacity: 0;
 }
-.hide-fade.ng-hide-add, .hide-fade.ng-hide-remove.ng-hide-remove-active {
+
+.hide-fade.ng-hide-add,
+.hide-fade.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
 }
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* General button style (reset) */
 
 .btn {
@@ -241,6 +325,7 @@ header nav a:last-child {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 .btn:after {
     content: '';
     position: absolute;
@@ -249,18 +334,25 @@ header nav a:last-child {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+
 /* Button 1 */
 
 .btn-1 {
     border: 3px solid #fff;
     color: #fff;
 }
+
+
 /* Button 1a */
 
-.btn-1a:hover, .btn-1a:active {
+.btn-1a:hover,
+.btn-1a:active {
     color: #0e83cd;
     background: #fff;
 }
+
+
 /* Button 1b */
 
 .btn-1b:after {
@@ -270,12 +362,18 @@ header nav a:last-child {
     left: 0;
     background: #fff;
 }
-.btn-1b:hover, .btn-1b:active {
+
+.btn-1b:hover,
+.btn-1b:active {
     color: #0e83cd;
 }
-.btn-1b:hover:after, .btn-1b:active:after {
+
+.btn-1b:hover:after,
+.btn-1b:active:after {
     height: 100%;
 }
+
+
 /* Button 1c */
 
 .btn-1c:after {
@@ -285,17 +383,24 @@ header nav a:last-child {
     left: 0;
     background: #fff;
 }
-.btn-1c:hover, .btn-1c:active {
+
+.btn-1c:hover,
+.btn-1c:active {
     color: #0e83cd;
 }
-.btn-1c:hover:after, .btn-1c:active:after {
+
+.btn-1c:hover:after,
+.btn-1c:active:after {
     width: 100%;
 }
+
+
 /* Button 1d */
 
 .btn-1d {
     overflow: hidden;
 }
+
 .btn-1d:after {
     width: 0;
     height: 103%;
@@ -308,22 +413,29 @@ header nav a:last-child {
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-.btn-1d:hover, .btn-1d:active {
+
+.btn-1d:hover,
+.btn-1d:active {
     color: #0e83cd;
 }
+
 .btn-1d:hover:after {
     width: 90%;
     opacity: 1;
 }
+
 .btn-1d:active:after {
     width: 101%;
     opacity: 1;
 }
+
+
 /* Button 1e */
 
 .btn-1e {
     overflow: hidden;
 }
+
 .btn-1e:after {
     width: 100%;
     height: 0;
@@ -336,22 +448,29 @@ header nav a:last-child {
     -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
-.btn-1e:hover, .btn-1e:active {
+
+.btn-1e:hover,
+.btn-1e:active {
     color: #0e83cd;
 }
+
 .btn-1e:hover:after {
     height: 260%;
     opacity: 1;
 }
+
 .btn-1e:active:after {
     height: 400%;
     opacity: 1;
 }
+
+
 /* Button 1f */
 
 .btn-1f {
     overflow: hidden;
 }
+
 .btn-1f:after {
     width: 101%;
     height: 0;
@@ -364,18 +483,26 @@ header nav a:last-child {
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-.btn-1f:hover, .btn-1f:active {
+
+.btn-1f:hover,
+.btn-1f:active {
     color: #0e83cd;
 }
+
 .btn-1f:hover:after {
     height: 75%;
     opacity: 1;
 }
+
 .btn-1f:active:after {
     height: 130%;
     opacity: 1;
 }
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* Blinker Style */
 
 .blinker {
@@ -392,6 +519,7 @@ header nav a:last-child {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
 @-moz-keyframes blinker {
     0% {
         opacity: 1.0;
@@ -403,6 +531,7 @@ header nav a:last-child {
         opacity: 1.0;
     }
 }
+
 @-webkit-keyframes blinker {
     0% {
         opacity: 1.0;
@@ -414,6 +543,7 @@ header nav a:last-child {
         opacity: 1.0;
     }
 }
+
 @keyframes blinker {
     0% {
         opacity: 1.0;
@@ -425,7 +555,11 @@ header nav a:last-child {
         opacity: 1.0;
     }
 }
+
+
 /*------------------------------------------------------------------------------*/
+
+
 /* Main Page Ticker Style */
 
 ul#ticker {
@@ -436,8 +570,47 @@ ul#ticker {
     font-size: 5em;
     text-transform: capitalize;
 }
+
 ul#ticker li {
     padding: 10px;
     margin: 0 auto;
 }
+
+
+/*------------------------------------------------------------------------------*/
+
+
+/* Page Background Style */
+
+div#page_1 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.22)), url("../img/page1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#page_2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.22)), url("../img/page2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#page_3 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.22)), url("../img/page3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#page_4 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.22)), url("../img/page4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#page_5 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.22)), url("../img/page5.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /*------------------------------------------------------------------------------*/
