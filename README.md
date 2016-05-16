@@ -1,4 +1,4 @@
-# Angular Seed
+# Angular Seed [![Twitter](https://img.shields.io/badge/Twitter-@nisrulz-blue.svg?style=flat)](http://twitter.com/nisrulz)
 The most basic site using angularjs. You can use this as your base project, when starting out to build a website.
 
 How to run on localhost
