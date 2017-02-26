@@ -3,7 +3,7 @@ The most basic site using angularjs. You can use this as your base project, when
 
 ### Show some :heart:
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/angular-seed.svg?style=social&label=Star)](https://github.com/nisrulz/angular-seed) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/angular-seed.svg?style=social&label=Fork)](https://github.com/nisrulz/angular-seed/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/angular-seed.svg?style=social&label=Watch)](https://github.com/nisrulz/angular-seed) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/angular-seed)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz) 
+[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
 
 
 How to run on localhost
@@ -14,12 +14,15 @@ Using Python 2.x
 python -m SimpleHTTPServer
 ```
 
-Fork and customize/build your own. Send a pull request to contribute.
+# Pull Requests
+I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request.
 
 
-> If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
->
-> <a href='https://ko-fi.com/A443EQ6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=f' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+### Created & Maintained By
+[Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
+
+> If you found this tool helpful in any way and want to thank me, consider [buying me a cup of](https://www.paypal.me/nisrulz/5) :coffee:
+
 
 License
 =======
